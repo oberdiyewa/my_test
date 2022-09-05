@@ -1,0 +1,22 @@
+Biz barada:
+Psihologiýada her bir adam öz gylyk-häsiýeti, özüni alyp baryşy boýunça 4 dürli temperamenta bölünýär.Temperamnet diýip, şahsyýetiň özüni alyp barşynyň dinamikasyny(ýagny güýjüni) kesgitleýän durnukly indiwidual psihologik aýratynlyklaryna aýdylýar.
+Hazirki wagtda temperamentiň tipini anyklamak üçin birnäçe usullar bar. Biz bu programmamyzda G.Ayzenkiň test usulyny ulanyarys. Bu test 57 sany soragdan ybarat bolup. Her bir ulanyjy soraglara "Hawa" yada "yok" jogap berýärler. Ähli soraglar jogaplanandan soňra, "Ýalan şkalasy" barlanýar. "Ýalan şkalasy" bu ulanyjy soraglara dogry jogap berendigni ýa-da hakykaty aýtman, jemgyýetde kabul edilen kadalara laýyklykda jogap berenligini barlaýan tapgyrydyr.
+Eger ulanyjy ähli soraglarda hakykaty aýdan bolsa netije aýdylýar: holerik, sangwinik, flegmatik, melanholik.
+Eger ýalan şkalasynda hakykaty jogap bermedigi anyklanylsa ulanyjydan teste tazeden jogaplamagy soralyar.
+
+
+Instruksiýa:
+Soraglara "hawa" ýa-da "ýok" diýip jogap beriň. Soraglara jogap bereniňizde özüňizi gowy tarapdan görkezjek bolup hereket etmäň. Kän pikirlenmäň. Ilkinji kelläňize gelen jogap dogrudyr.
+
+
+
+Netijeler:
+Melanholik- keýpi aňsat bozulýar, galagoply, pikirlenmesi bir boluşly, pessimist, pikir ýöretmä ýykgyn, sabyrly, köpçülige goşulmaýanm ýuwaş
+Flegmatik- passiw, seresaply, paýhasly, hoşniýetli, parahatlyk söýüji, ynamdar, asuda, ynam dörediji, deňagramly
+Holerik- aktiw, duýgur, ynjalyksyz, agressiw, üýtgeýji, durnuksyz, impulsiw, optimist
+sangwinik- açyk, alçak, gürlegen, duýgur, erkin, sada, şähdaçyk, aladasyz, inisiatiwaly
+
+
+Ýalan şkalasy:
+
+Bagyşlaň, Siz soraglara jogap bereniňizde hakykaty jogap berendigiňiz barada şübhelenýäris. Haýyş edýäs, täzeden synanşyň!
