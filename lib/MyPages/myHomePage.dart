@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_test/MyPages/ContactPage.dart';
+import 'package:my_test/MyPages/aboutUs.dart';
 import 'package:my_test/MyPages/instruction.dart';
+import 'package:my_test/MyPages/out.dart';
 import 'package:my_test/global/image_path.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -9,6 +12,21 @@ class MyHomePage extends StatelessWidget {
   void goInstruction(BuildContext context) {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: ((context) => Instruction())));
+  }
+
+  void goAboutUs(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: ((context) => AboutUs())));
+  }
+
+  void goContact(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: ((context) => Contact())));
+  }
+
+  void goOut(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: ((context) => Out())));
   }
 
   @override
@@ -53,7 +71,7 @@ class MyHomePage extends StatelessWidget {
               ),
 
               menyular(
-                onTap: () => goInstruction(context),
+                onTap: () => goContact(context),
                 renk: Colors.white,
                 soz: "Hawarlaşmak",
                 surat: MyImages.phoneIcon,
@@ -61,14 +79,14 @@ class MyHomePage extends StatelessWidget {
               ),
 
               menyular(
-                onTap: () => goInstruction(context),
+                onTap: () => goAboutUs(context),
                 renk: Colors.white,
                 soz: "Biz barada",
                 surat: MyImages.personIcon,
                 boshluk: 40,
               ),
               menyular(
-                onTap: () => goInstruction(context),
+                onTap: () => goOut(context),
                 renk: const Color.fromRGBO(249, 191, 190, 1),
                 soz: "Çykmak",
                 surat: MyImages.outIcon,

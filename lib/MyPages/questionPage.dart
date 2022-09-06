@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_test/MyPages/result.dart';
 import 'package:my_test/main.dart';
 import 'package:my_test/models/soraglar.dart';
 
@@ -10,10 +11,21 @@ class QuestionPage extends StatefulWidget {
 }
 
 class _QuestionPageState extends State<QuestionPage> {
-  var size, height, width;
+  // Size? size;
+  // double? height;
+  // double? width;
 
   int _currentIndex = 0;
-
+  //shutayda soraglary gecyas wagtlayn goylan
+  /*
+  @override
+  void initState() {
+    for (var i = 0; i <= allSoraglar.length - 3; i++) {
+      allSoraglar[i].setAnswer = false;
+      _currentIndex++;
+    }
+  }
+*/
   void answer(int index, bool answer) {
     final current = allSoraglar[index];
     current.setAnswer = answer;
@@ -31,32 +43,19 @@ class _QuestionPageState extends State<QuestionPage> {
     }
   }
 
-  List<Sorag> hawawlar() {
-    return allSoraglar
-        .where(
-          (element) => element.getAnswer == true,
-        )
-        .toList();
-  }
-
-  List<Sorag> yoklar() {
-    return allSoraglar
-        .where(
-          (element) => element.getAnswer == false,
-        )
-        .toList();
-  }
-
   @override
   Widget build(BuildContext context) {
-    size = MediaQuery.of(context).size;
-    height = size.height;
-    width = size.width;
+    // var count = 0;
+    // var countE = 0;
+    // var countN = 0;
+    // size = MediaQuery.of(context).size;
+    // height = size!.height;
+    // width = size!.width;
 
     return Scaffold(
       body: Container(
-        width: width,
-        height: height,
+        width: 360, //MediaQuery.of(context).size.width,
+        height: 740, //MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("fon.png"),
@@ -65,34 +64,48 @@ class _QuestionPageState extends State<QuestionPage> {
         ),
         child: _currentIndex == -1
             ? Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Text('tamam'),
-                  TextButton(
-                    onPressed: (() {
-                      ////// Shu yere seret
-
-                      for (var element in allSoraglar) {
-                        print(' -Hawalar-- - -- - -- -- - -');
-                        var hawalar = hawawlar();
-                        for (var element in hawalar) {
-                          print(element.id);
-                        }
-                        //print(hawalar);
-                        print(' - -- - -- - -- -- - -');
-                        print(' -Yoklar-- - -- - -- -- - -');
-                        var yokla = yoklar();
-                        print(yokla);
-
-                        //print('${element.id}= ${element.getAnswer}');
-                      }
+                  Padding(
+                    padding: const EdgeInsets.only(top: 200, bottom: 50),
+                    child: Text(
+                      'Siz ähli soraglara jogap berdiňiz',
+                      style: TextStyle(
+                          color: Color.fromRGBO(58, 57, 57, 1),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (() {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MyResult()));
                     }),
-                    child: const Text('Jogaplary print et'),
-                  )
+                    child: Container(
+                      width: 170,
+                      height: 50,
+                      padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                      margin: EdgeInsets.only(bottom: 170),
+
+                      //width: buttonWidth,
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(197, 231, 226, 1),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Netijäni görkez",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                              color: Color.fromRGBO(58, 57, 57, 1)),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               )
             : Column(
-                // mainAxisAlignment: MainAxisAlignment.center,
-                // mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
@@ -111,15 +124,14 @@ class _QuestionPageState extends State<QuestionPage> {
                     padding: const EdgeInsets.only(bottom: 30, top: 50),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      
                       children: [
                         InkWell(
                           onTap: (() => answer(_currentIndex, false)),
                           child: Container(
                             width: 100,
                             height: 40,
-                            padding:
-                                EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 0, horizontal: 0),
                             margin: EdgeInsets.only(bottom: 170),
 
                             //width: buttonWidth,
@@ -143,8 +155,8 @@ class _QuestionPageState extends State<QuestionPage> {
                           child: Container(
                             width: 100,
                             height: 40,
-                            padding:
-                                EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 0, horizontal: 0),
                             margin: EdgeInsets.only(bottom: 170),
 
                             //width: buttonWidth,

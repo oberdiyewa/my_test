@@ -29,9 +29,21 @@ class Instruction extends StatelessWidget {
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+         crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 170, bottom: 20),
+              padding: const EdgeInsets.all(8.0),
+              child: IconButton(
+                icon: const Icon(Icons.arrow_back_ios),
+                tooltip: 'go back',
+                onPressed: () {
+                  
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 170, bottom: 20, left: 110),
               child: Text(
                 "Instruksiýa".toUpperCase(),
                 style: TextStyle(
@@ -64,7 +76,7 @@ class Instruction extends StatelessWidget {
                 width: 100,
                 height: 40,
                 padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-                margin: EdgeInsets.only(bottom: 170),
+                margin: EdgeInsets.only(bottom: 170, left: 120),
 
                 //width: buttonWidth,
                 decoration: BoxDecoration(
@@ -87,33 +99,4 @@ class Instruction extends StatelessWidget {
       ),
     );
   }
-
-//   myButton(
-//       {required double buttonWidth,
-//       required Color renk,
-//       required Function() onTap,
-//       required String soz}) {
-//     return InkWell(
-//       onTap: onTap,
-//       child: Container(
-//         alignment: Alignment.bottomCenter,
-//         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
-
-//         //width: buttonWidth,
-//         decoration: BoxDecoration(
-//           color: renk,
-//           borderRadius: BorderRadius.circular(10),
-//         ),
-//         child: Center(
-//           child: Text(
-//             soz,
-//             style: TextStyle(
-//                 fontSize: 20,
-//                 fontWeight: FontWeight.w700,
-//                 color: Color.fromRGBO(58, 57, 57, 1)),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
 }
